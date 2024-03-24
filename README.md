@@ -6,7 +6,7 @@ sudo apt-get update && sudo apt-get dist-upgrade
 
 # Install some stuff
 
-sudo apt install fzf jq podman pip
+sudo apt install fzf jq podman pip net-tools
 
 pip3 install ansible ansible-lint
 
