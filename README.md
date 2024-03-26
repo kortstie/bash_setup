@@ -13,10 +13,10 @@ pip3 install ansible ansible-lint
 
 
 # Install fzf Key Bindings
-echo ". /usr/share/doc/fzf/examples/key-bindings.bash" >> ~/.bashrc
+    echo ". /usr/share/doc/fzf/examples/key-bindings.bash" >> ~/.bashrc
 
 # Add ~/.local/bin to path
-echo "export PATH=\$PATH:\$HOME/.local/bin" >> ~/.bashrc
+    echo "export PATH=\$PATH:\$HOME/.local/bin" >> ~/.bashrc
 
 
 
