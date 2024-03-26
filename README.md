@@ -2,11 +2,11 @@
 
 # Ubuntu Upgrade
 
-sudo apt-get update && sudo apt-get dist-upgrade
+sudo apt-get update && sudo apt-get -y dist-upgrade
 
 # Install some stuff
 
-sudo apt install fzf jq podman pip net-tools
+sudo apt -y install fzf jq podman pip net-tools
 
 pip3 install ansible ansible-lint
 
