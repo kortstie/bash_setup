@@ -1,16 +1,13 @@
-# My Bash Setup
+# Prerequisites - Prepare your environment
 
 ## Ubuntu Upgrade
 
     sudo apt-get update && sudo apt-get -y dist-upgrade
 
-## Install some stuff
+## Install some usefull stuff
 
     sudo apt -y install fzf jq podman pip net-tools
-
     pip3 install ansible ansible-lint
-
-
 
 ## Install fzf Key Bindings
     echo ". /usr/share/doc/fzf/examples/key-bindings.bash" >> ~/.bashrc
@@ -18,15 +15,15 @@
 ## Add ~/.local/bin to path
     echo "export PATH=\$PATH:\$HOME/.local/bin" >> ~/.bashrc
 
-
-## fix podman error under ubuntu 22.4
+## Fix podman error under ubuntu 22.4
     sudo apt install dbus-user-session
-restart wsl
 
-## azure cli
+*Restart wsl now!*
+
+## Get Azure CLI
     curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bas
 
-## get and install kubectl
+## Get and install kubectl
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
     sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
