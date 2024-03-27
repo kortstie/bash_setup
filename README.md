@@ -29,3 +29,11 @@ restart wsl
 ## get and install kubectl
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
     sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+## Write bash completion code to a file and source it from .bash_profile
+    kubectl completion bash > ~/.kube/completion.bash.inc
+    printf "
+    # kubectl shell completion
+    source '$HOME/.kube/completion.bash.inc'
+    " >> $HOME/.bash_profile
+    source $HOME/.bash_profile
