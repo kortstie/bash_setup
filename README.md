@@ -23,5 +23,7 @@ pip3 install ansible ansible-lint
     sudo apt install dbus-user-session
 restart wsl
 
+## azure cli
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bas
 
 
