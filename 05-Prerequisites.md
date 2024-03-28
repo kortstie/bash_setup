@@ -31,6 +31,6 @@
     kubectl completion bash > ~/.local/completion.bash.inc
     printf "
     # kubectl shell completion
-    source '$HOME/.kube/completion.bash.inc'
+    source '$HOME/.local/completion.bash.inc'
     " >> $HOME/.bash_profile
     source $HOME/.bash_profile
