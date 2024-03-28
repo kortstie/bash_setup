@@ -34,3 +34,7 @@
     source '$HOME/.local/completion.bash.inc'
     " >> $HOME/.bash_profile
     source $HOME/.bash_profile
+
+### Git setup
+    git config --global user.name "Frank Kortstiege"
+    git config --global user.email "you@example.com"
