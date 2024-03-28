@@ -23,18 +23,19 @@
 ### Get Azure CLI
     curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
-### #Get and install kubectl
+### #Get, install and configure kubectl
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
     sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-    ln -s /usr/local/bin/kubectl ~/.local/bin/oc
 
-### Write bash completion code to a file and source it from .bash_profile
     kubectl completion bash > ~/.local/completion.bash.inc
     printf "
+
     # kubectl shell completion
     source '$HOME/.local/completion.bash.inc'
-    " >> $HOME/.bash_profile
-    source $HOME/.bash_profile
+    alias oc=kubectl
+    complete -o default -F __start_kubectl k
+    " >> $HOME/.bashrc
+    source $HOME/.bashrc
 
 ### Git setup
     git config --global user.name "Frank Kortstiege"
