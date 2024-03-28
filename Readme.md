@@ -33,7 +33,7 @@
     # kubectl shell completion
     source '$HOME/.local/completion.bash.inc'
     alias oc=kubectl
-    complete -o default -F __start_kubectl k
+    complete -o default -F __start_kubectl oc
     " >> $HOME/.bashrc
     source $HOME/.bashrc
 
