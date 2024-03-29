@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 read -p "Enter your name: " name
 read -p "Enter your email: " email
