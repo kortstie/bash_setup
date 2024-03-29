@@ -36,12 +36,13 @@ complete -o default -F __start_kubectl oc
 " >> $HOME/.bashrc
 source $HOME/.bashrc
 
-### Install Helm
-curl -sL "https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3" | sudo bash
-
 ### Git setup
 git config --global user.name "$name"
 git config --global user.email "$email"
 
 ### Create ssh key
 ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -q -N ""
+
+### Install Helm
+curl -sL "https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3" | sudo bash
+
