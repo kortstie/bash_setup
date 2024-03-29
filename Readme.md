@@ -4,10 +4,10 @@ Setup a basic working environment using ubuntu wsl. You will get:
 
 - Updated ubuntu
 - Tools like:
--- podman
--- ansible
--- helm
--- kubectl
+    - podman
+    - ansible
+    - helm
+    - kubectl
 - Azure CLI
 
 ### Just follow these steps to get started
