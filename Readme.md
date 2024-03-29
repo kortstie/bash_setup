@@ -1,42 +1,27 @@
 # Prerequisites - Prepare your environment
 
-### Ubuntu Upgrade
+Setup a basic working environment using ubuntu wsl. You will get:
 
-    sudo apt-get update && sudo apt-get -y dist-upgrade
+- Updated ubuntu
+- Tools like:
+-- podman
+-- ansible
+-- helm
+-- kubectl
+- Azure CLI
 
-### Install some usefull stuff
+Just follow these steps:
 
-    sudo apt -y install fzf jq podman pip net-tools
-    pip3 install ansible ansible-lint
+    wsl --install ubuntu
 
-### Install fzf Key Bindings
-    echo ". /usr/share/doc/fzf/examples/key-bindings.bash" >> ~/.bashrc
+    ./setup.sh
 
-### Add ~/.local/bin to path
-    echo "export PATH=\$PATH:\$HOME/.local/bin" >> ~/.bashrc
+Restart WSL now.
 
-### Fix podman error under ubuntu 22.4
-    sudo apt install dbus-user-session
+Command:
 
-*Restart wsl now!*
+    wsl shutdown ubuntu
 
-### Get Azure CLI
-    curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+And Start it again:
 
-### #Get, install and configure kubectl
-    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-    sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-
-    kubectl completion bash > ~/.local/completion.bash.inc
-    printf "
-
-    # kubectl shell completion
-    source '$HOME/.local/completion.bash.inc'
-    alias oc=kubectl
-    complete -o default -F __start_kubectl oc
-    " >> $HOME/.bashrc
-    source $HOME/.bashrc
-
-### Git setup
-    git config --global user.name "Frank Kortstiege"
-    git config --global user.email "you@example.com"
+    wsl
