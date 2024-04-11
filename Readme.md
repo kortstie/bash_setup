@@ -1,20 +1,23 @@
-# Prerequisites - Prepare your environment
+# Create a devops workbench
 
-Setup a basic working environment using ubuntu wsl. You will get:
+![title](images/title.jpg)
 
-- Updated ubuntu
-- Tools like:
+## What will you get?
+
+- install wsl ubuntu
+- update ubuntu
+- install tools like:
     - podman
     - ansible
     - helm
     - kubectl
 - Azure CLI
 
-### Just follow these steps to get started
+## Install ubuntu wsl
 
     wsl --install ubuntu
 
-Update ubuntu and install additional tools
+## all-in-one (or look at setup.sh)
 
     curl -sL https://raw.githubusercontent.com/kortstie/wsl_setup/main/setup.sh > /tmp/setup.sh && chmod 755 /tmp/setup.sh && /tmp/setup.sh
     
